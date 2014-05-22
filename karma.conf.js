@@ -11,9 +11,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.6/angular.js',
-      'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.6/angular-mocks.js',
-      'src/angular-promises.js',
+      'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js',
+      'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-mocks.js',
+      'src/async-promises.js',
       'test/*.js'
     ],
 

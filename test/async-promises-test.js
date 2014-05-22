@@ -39,10 +39,10 @@ describe('AsyncPromises', function () {
       }
 
       // fake reject with data
-      dfd.reject = dfd.reject.bind(dfd, opts.rejectWith)
+      dfd.reject = angular.bind(dfd, dfd.reject, opts.rejectWith)
 
       // fake notify with data
-      dfd.notify = dfd.reject.bind(dfd, opts.notifyWith)
+      dfd.notify = angular.bind(dfd, dfd.reject, opts.notifyWith)
 
       mock.dfds.push(dfd)
       this.tasks.push(task)
@@ -61,7 +61,7 @@ describe('AsyncPromises', function () {
     }
   }
 
-  beforeEach(module('async-promises'))
+  beforeEach(angular.mock.module("async-promises"))
   beforeEach(inject(function($injector) {
     scope = $injector.get('$rootScope')
     clearBuffer(true)

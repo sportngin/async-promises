@@ -40,7 +40,7 @@
     "grunt-conventional-changelog": "0.0.12",
     "grunt-zip": "*",
     "karma": "~0.12.1",
-    "karma-jasmine": "~0.1.5",
+    "karma-jasmine": "~0.2.1",
     "karma-chrome-launcher": "~0.1.2",
     "karma-phantomjs-launcher": "~0.1.2",
     "karma-firefox-launcher": "~0.1.3"

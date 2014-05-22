@@ -1,14 +1,14 @@
-;(function() { 'use strict'
+;(function() { 'use strict';
 
 
-  var module = angular.module('async-promises', [])
+  var module = angular.module('async-promises', ['$q'])
 
-  module.provider('AsyncPromises', function($q) {
+  module.factory('AsyncPromises', function($q) {
 
     function count(obj) {
-      var count = 0
-      for (var key in obj) { count++ }
-      retunr count
+      var c = 0
+      for (var key in obj) { c++ }
+      return c
     }
 
     function Auto(tasks) {
@@ -36,7 +36,7 @@
         this.resolveDependency(key)
       }
 
-      angular.forEach(tasks, this.setDependencies.bind(this))
+      angular.forEach(tasks, angular.bind(this, this.setDependencies))
       this.startNonDependentTasks()
 
       return dfd.promise
@@ -81,7 +81,8 @@
       },
 
       startNonDependentTasks: function() {
-        angular.forEach(this.tasks, function(dependencies, key) {
+        var self = this
+        angular.forEach(self.tasks, function(dependencies, key) {
           if (!dependencies || dependencies.length || !dependencies.runTask) return
           var promise = dependencies.runTask()
 
@@ -92,16 +93,16 @@
           // report progress or errors when complete
           if (promise && promise.then) {
             promise.then(
-              angular.bind(this, this.progress, key),
-              angular.bind(this, this.error, key)
+              angular.bind(self, self.progress, key),
+              angular.bind(self, self.error, key)
             )
           }
 
           // or resolve now if non-promise value is returned
           else {
-            this.progress(key, promise) 
+            self.progress(key, promise) 
           }
-        }.bind(this))
+        })
       }
 
     }
