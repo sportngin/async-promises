@@ -1,7 +1,7 @@
 ;(function() { 'use strict';
 
 
-  var module = angular.module('async-promises', ['$q'])
+  var module = angular.module('async-promises', [])
 
   module.factory('AsyncPromises', function($q) {
 

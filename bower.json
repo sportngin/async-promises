@@ -1,7 +1,7 @@
 {
   "name": "angular-promises",
   "version": "0.0.1",
-  "main": "./dist/restangular.js",
+  "main": "./dist/async-promises.js",
   "description": "Promise dependency manager for AngularJS apps",
   "repository": {
     "type": "git",
