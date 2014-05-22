@@ -1,0 +1,18 @@
+{
+  "name": "angular-promises",
+  "version": "0.0.1",
+  "main": "./dist/restangular.js",
+  "description": "Promise dependency manager for AngularJS apps",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sportngin/async-promises.git"
+  },
+  "dependencies": {
+    "angular": "*"
+  },
+  "ignore": [
+    "node_modules",
+    "components",
+    "lib"
+  ]
+}

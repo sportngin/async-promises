@@ -1,0 +1,52 @@
+{
+  "name": "async-promises",
+  "description": "Restful Resources service for AngularJS apps",
+  "version": "1.4.0",
+  "filename": "async-promises.min.js",
+  "main": "./dist/async-promises.min.js",
+  "homepage": "https://github.com/sportngin/async-promises",
+  "author": "Jesse Houchins <jesse.houchins@sportngin.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sportngin/async-promises.git"
+  },
+  "engines": {
+    "node": ">= 0.9"
+  },
+  "keywords": [
+    "angular",
+    "client",
+    "browser",
+    "async",
+    "promises",
+    "dependent",
+    "dependencies"
+  ],
+  "maintainers": [
+    {
+      "name": "Sport Ngin",
+      "website": "https://github.com/sportngin/async-promises"
+    }
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "grunt-cli": ">= 0.1.7",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-bower": "*",
+    "grunt-bower-task": "*",
+    "grunt-karma": "latest",
+    "grunt-conventional-changelog": "0.0.12",
+    "grunt-zip": "*",
+    "karma": "~0.12.1",
+    "karma-jasmine": "~0.1.5",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-phantomjs-launcher": "~0.1.2",
+    "karma-firefox-launcher": "~0.1.3"
+  },
+  "scripts": {
+    "test": "grunt test --verbose"
+  },
+  "license": "MIT"
+}
