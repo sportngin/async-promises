@@ -69,7 +69,7 @@ AsyncPromises.auto({
 
 ----------------------------------------------------------
 
-# Contributing [☝](#menu)
+# Contributing
 
 If you find bugs in this library, or would like to see additional flow control methods added, just [open an issue](https://github.com/sportngin/async-promises/issues) or [submit a pull request](https://github.com/sportngin/async-promises/pulls). 
 
