@@ -29,13 +29,13 @@ Each flow control method may take different arguments, but all will support succ
 
 ----------------------------------------------------------
 
-# Configuration [☝](#menu)
+# Configuration
 
 ...
 
 ----------------------------------------------------------
 
-# Documentation [☝](#menu)
+# Documentation
 
 ### `.auto(tasks)`
 
